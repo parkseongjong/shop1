@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#visit {padding:20px ;background:#333947}
+.visit_wr{margin:0 auto;max-width:1500px;padding:0 10px}
+#visit h2{display:inline-block;color:#fff;margin-right:10px}
+#visit dl {display:inline-block}
+#visit dl:after {display:block;visibility:hidden;clear:both;content:""}
+#visit dt {display:inline-block;color:#9da1a5;margin-right:5px}
+#visit dd {display:inline-block;color:#fff;background:#528eff;padding:0 8px;border-radius:30px;margin-right:15px}
+#visit a {display:inline-block;padding:10px 3px;text-decoration:none}
+
+@media (max-width: 639px){
+     #visit h2{display:block;margin:0 0 10px}
+     #visit{padding:15px}
+     .visit_wr{padding:0}
+}

@@ -1,0 +1,3 @@
+<?php if (!defined('_GNUBOARD_')) exit; ?>
+
+YTozOntzOjQ6InRpbWUiO2k6MTY4NDA4NjYzNDtzOjM6InR0bCI7aTo2MDA7czo0OiJkYXRhIjthOjI6e3M6NDoibGlzdCI7YTowOnt9czoxMDoiYm9fc3ViamVjdCI7czoxODoi67K866Op7Iuc7J6l6rSR6rOgIjt9fQ==

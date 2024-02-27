@@ -1,0 +1,31 @@
+@charset "utf-8";
+.ol h2 {width:0;height:0;overflow:hidden}
+
+#ol_before{}
+#ol_before li{display:inline-block;margin:28px 0;line-height:14px}
+#ol_before a{color:#8590a1;display:block;padding:0 10px}
+#ol_password_lost{border-left:1px solid #777}
+.ol_login{border-left:1px solid #7d8798}
+
+#ol_after {display:block;color:#fff;}
+#ol_after .prf_btn{border:0;margin-top:20px;background:none;color:#9faabc;line-height:30px;margin-right:5px}
+#ol_after .prf_btn img{border-radius:50%;width:30px;height:30px;vertical-align:top}
+
+#ol_after_private{display:none;position:absolute;top:60px;background:#fff;border-radius:3px;z-index:9;padding:10px 0;width:160px;
+-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.2) ;
+-moz-box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+box-shadow: 0 2px 7px rgba(0,0,0,0.2);}
+#ol_after_private li{line-height:30px}
+#ol_after_private li a{color:#808a9b;display:block;padding: 0 15px}
+#ol_after_private li a:hover{background:#;color:#4383fa}
+#ol_after_private li a:after {display:block;visibility:hidden;clear:both;content:""}
+#ol_after_private li strong{display:inline-block;background:#fac843;float:right;line-height:20px;color:#fff;border-radius:30px;padding:0 7px;font-size:0.92em;margin-top:6px}
+#ol_after_private li .admin{color:#ff0000 !important}
+
+@media (min-width: 970px){
+    .ol {;position:absolute;top:0;right:50px}
+}
+
+@media (max-width: 969px){
+    .ol {padding:0 20px}
+}

@@ -1,0 +1,12 @@
+{
+    "require": {
+        "league/plates": "3.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "barry\\db\\": "../barryDbDriver",
+            "barry\\encrypt\\": "../barryEncrypt"
+        }
+    }
+    
+}

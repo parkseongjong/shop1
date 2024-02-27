@@ -1,0 +1,368 @@
+@charset "utf-8";
+/* 
+
+
+    공통 스타일
+
+
+*/
+
+#bsCommonAlert,
+#bsCommonConfirm{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    min-height: 50px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    z-index: 99999999;
+}
+
+/*datepicker style*/
+
+.ui-datepicker{
+    left: 0px !important;
+    width: 100% !important;
+    padding: 15px;
+}
+.ui-datepicker .ui-state-default.ui-state-active{
+    background: #64c12f;
+    border: 1px solid #64c12f;
+}
+
+/* Customize the label (the container) */
+.checkBoxContainer {
+    position: relative;
+    width: auto;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkBoxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkBoxContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBoxContainer input:checked ~ .checkmark {
+    background-color: #74c845;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBoxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBoxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 9px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*
+
+
+    Header
+
+
+*/
+#hd{
+    border-bottom: 1px solid #000;
+}
+#hd #logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    padding: 10px;
+}
+#hd #logo.textTitle {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0 50px 0 50px;
+}
+article.headerTopMenu{
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 35px;
+    padding: 0;
+}
+article.headerTopMenu > ul > li > a{
+    display: flex;
+    align-items: center;
+}
+article.headerTopMenu > ul > li span.couponIco{
+    width: 30px;
+    height: 30px;
+    background-color: #64c12f;
+    mask: url(../../img/coupon.svg) no-repeat center / contain;
+    -webkit-mask: url(../../img/coupon.svg) no-repeat center / contain;
+    animation: twinkle 1s ease-in-out .1s infinite alternate;
+}
+article.headerTopMenu > ul > li:hover span.couponIco{
+    background-color: #f57900;
+}
+@keyframes twinkle {
+    0% {
+        background-color: #64c12f;
+    }
+    100% {
+        background-color: #f57900;
+    }
+}
+article.headerTopMenu > ul > li h3{
+    font-size: 11px;
+    font-weight: 500;
+    color: #393939;
+    margin-left: 10px;
+}
+article.headerTopMenu > ul > li:hover h3{
+    color: #f57900;
+}
+
+#gnb_open {
+    background:url(../../img/gnb_menu.png) no-repeat 50% 50%;
+    background-size:50%;
+    left: 6px;
+}
+.gnb_back {
+    background:url(../../img/gnb_back.png) no-repeat 50% 50%;
+    background-size:33%;
+    left: 10px;
+}
+#sch_open {
+    background: url(../../img/gnb_sch.png) no-repeat 50% 50%;
+    background-size:50%;
+    right: 6px;
+}
+.setting_go {
+    background: url(../../img/icon_setting32.png) no-repeat 50% 50%;
+    background-size:60%;
+    right: 40px;
+}
+#gnb_like {
+    background-image:url(../../img/gnb_like.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:50%;
+    right: 6px;
+}
+#cart_open {
+    background:url(../../img/gnb_cart.png) no-repeat 50% 50%;
+    right: 36px;
+}
+
+#gnb_open,
+.gnb_back,
+#sch_open,
+.setting_go,
+#gnb_like,
+#cart_open{
+    position:absolute;
+    top:0;
+    width:44px;
+    height:64px;
+    padding:0;
+    border:0;
+    outline:none;
+}
+
+/* menu start */
+#top_cate {
+    display:block;
+    background:#f7f7f7;
+    margin-bottom: 0px
+}
+#top_cate ul {
+    display: flex;
+    width:100%;
+    height:48px;
+    overflow:hidden;
+    list-style-type:none;
+}
+#top_cate li {
+    position: relative;
+    flex: 1 1 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: inherit;
+    font-size:11.2pt;
+    text-align:center;
+    word-break: keep-all;
+    color:#898989;
+}
+#top_cate li > a {
+    color:#898989;
+}
+#top_cate li.on {
+    color: #74c845;
+    font-weight: 700;
+}
+#top_cate li.on:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    left: 8px;
+    height: 4px;
+    -webkit-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    background-color: rgb(0, 0, 0);
+}
+#top_cate li.on > a {
+    color: #74c845;
+    font-weight: 700;
+}
+/* menu end */
+
+/*
+
+
+    member goods list, detail
+
+
+ */
+#good_info .status{
+    font-size: 18px;
+}
+
+/*
+
+
+    Footer
+
+
+*/
+#ft{
+    padding: 50px 20px 100px;
+}
+
+#ft div.info{
+    color:#c0c0c0;
+    padding: 10px 40px 0 2px;
+}
+
+/*
+
+
+레거시
+
+
+ */
+
+
+
+
+
+.blank {padding-top:3px; border-top:1px solid #f0f0f0;}
+.gnb_cate_title {font-size:17px;font-weight:400;margin:15px 17px 8px 19px}
+.gnb_1dul_shopping {background: rgb(255, 255, 255); padding: 10px 19px; margin: 10px 0; overflow:hidden;}
+.gnb_1dul_shopping table {width:100%;border-left:1px solid #d7d7d7;border-top:1px solid #d7d7d7;border-spacing:0;padding:0;}
+.gnb_1dul_shopping td {text-align:center;vertical-align:middle;width:33%;height:50px;line-height:19px;border-right:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;font-size:13px;border-spacing:0;padding:6px 4px}
+.gnb_1dul_shopping td a {font-size:13px;padding:0px;}
+.gnb_1dul_shopping td a.notready {color:#c0c0c0;}
+.gnb_1dul_shopping tr.header {border-top:1px solid #d7d7d7;}
+.gnb_1dul_shopping tr.header td {background:#f3f3f3;}
+
+#gnb {
+    position:fixed;
+    top:64px;
+    left:0;
+    display:none;
+    width:100%;
+    height:100%;
+    padding-bottom: 64px;
+    background: rgb(247, 247, 247);
+    z-index:999;
+}
+#gnb > div.contents{
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: 100%;
+    z-index: 10000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-shadow: 0 0 5px rgba(55,55,5,0.4));
+    -moz-box-shadow: 0 0 5px rgba(55,55,5,0.4));
+    box-shadow: 0 0 5px rgba(55,55,5,0.4);
+    margin: 0 auto;
+}
+#gnb_1dul{margin:10px 0}
+.gnb_1dli{position:relative;line-height:40px;display:block}
+.gnb_1dli button{position:absolute;top:0;right:0;background:url;border:0;width:40px;height:40px;overflow:hidden;border:0;background:url(../../img/gnb_bg.png) no-repeat 50% 50%;text-indent:-9999px}
+.gnb_1dli button.btn_gnb_cl{background:url(../../img/gnb_bg2.png) no-repeat 50% 50%}
+.gnb_1da {display:block;padding:0;font-size:1.154em;border-bottom:0;color:#444;padding: 0 20px}
+.gnb_2dul{background:#262b37;padding:10px 0}
+.gnb_2da {display:block;border-bottom:1px solid #2d2d2d;padding-left:40px;color:#fff}
+#gnb_close {position:absolute;top:0 ;right:0;display:block;margin:0;height:50px;width:50px;border:0;background:none;color:#000}
+
+/*
+@media (min-width: 970px){
+    #top_cate,
+    .gnb_back,
+    #sch_open,
+    .setting_go,
+    #gnb_like,
+    #cart_open{
+        display:none
+    }
+}
+ */

@@ -1,0 +1,16 @@
+<?php
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+?>
+
+<article class="completeArea">
+    <div class="alert alert-info">
+        <h3>상품 등록을 완료 하였습니다.</h3>
+        <p>베리베리 쇼핑몰 내 부정행위가 발생하여 상품 등록 시 관리자를 통하여 승인을 받아야 판매 가능합니다.</p>
+
+        <p>승인 여부는</p>
+        <p>설정 > 내 상품관리 에서 확인 가능 합니다.</p>
+    </div>
+
+    <a href="<?php echo G5_BBS_URL?>/member_goodslist.php" class="btn btn-secondary btn-block">내 상품 관리 가기</a>
+    <a href="<?php echo $return['turn_url'];?>" class="btn btn-secondary btn-block">내가 올린 상품 보기</a>
+</article>

@@ -1,0 +1,161 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+.request-permission-container {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    border-style: solid;
+    border-width: 0px;
+  }
+  img {
+    width: 100%;
+  }
+  height: 100%;
+  font-family: 'NanumSquare';
+
+  .request-permission-wrap {
+    height: inherit;
+    max-width: 800px;
+    margin: 0 auto;
+    .request-permission {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+
+      .request-permission-top-area {
+        flex: 1;
+        padding: 40px 20px;
+
+        .request-permission-top-inner {
+          .bb-market-logo-wrap {
+            width: 50%;
+            margin-bottom: 20px;
+            .bb-market-logo {
+            }
+          }
+          .request-permission-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #515151;
+          }
+          .request-permission-subtitle {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #4d4d4d;
+          }
+
+          .permission-list {
+            border-color: #bcf0c5;
+            border-top-width: 2px;
+            border-bottom-width: 2px;
+            padding: 25px 10px;
+            margin-bottom: 15px;
+
+            .permission-list-item {
+              display: flex;
+              align-items: center;
+              &:not(:last-of-type) {
+                margin-bottom: 20px;
+              }
+              .permission-list-item-icon-wrap {
+                flex: 0.2;
+                margin-right: 20px;
+              }
+              .permission-list-item-text-area {
+                flex: 1;
+                .permission-list-item-title {
+                  color: #52ca66;
+                  font-size: 14px;
+                  font-weight: 700;
+                  margin-bottom: 7px;
+                }
+                .permission-list-item-subtitle {
+                  color: #b4b4b4;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          .permission-bottom-text {
+            color: #989898;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 0 10px;
+          }
+        }
+      }
+      .request-permission-bottom-area {
+        width: 100%;
+        .confirm-button {
+          width: inherit;
+          padding: 20px 0;
+          background-color: #52ca66;
+          color: #fff;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 700px) {
+    .request-permission-wrap {
+      .request-permission {
+        .request-permission-top-area {
+          .request-permission-top-inner {
+            .bb-market-logo-wrap {
+              margin-bottom: 50px;
+              width: 30%;
+              .bb-market-logo {
+              }
+            }
+            .request-permission-title {
+              font-size: 40px;
+            }
+            .request-permission-subtitle {
+              font-size: 24px;
+            }
+  
+            .permission-list {
+              .permission-list-item {
+                &:not(:last-of-type) {
+                }
+                .permission-list-item-icon-wrap {
+                }
+                .permission-list-item-text-area {
+                  .permission-list-item-title {
+                    font-size: 24px;
+                    margin-bottom: 16px;
+                  }
+                  .permission-list-item-subtitle {
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+  
+            .permission-bottom-text {
+              font-size: 20px;
+            }
+          }
+        }
+        .request-permission-bottom-area {
+          .confirm-button {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}

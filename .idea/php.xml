@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/_PMA_/vendor/samyoul/u2f-php-server" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/google/recaptcha" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/composer" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/phpmyadmin/sql-parser" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/tecnickcom/tcpdf" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/phpmyadmin/motranslator" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/phpmyadmin/shapefile" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/_PMA_/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/plugin/barryCtcWallet/vendor/league/plates" />
+      <path value="$PROJECT_DIR$/plugin/barryCtcWallet/vendor/composer" />
+      <path value="$PROJECT_DIR$/plugin/barryDbDriver/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/plugin/barryDbDriver/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/plugin/barryDbDriver/vendor/composer" />
+      <path value="$PROJECT_DIR$/plugin/barryDbDriver/vendor/doctrine/event-manager" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/_PMA_/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

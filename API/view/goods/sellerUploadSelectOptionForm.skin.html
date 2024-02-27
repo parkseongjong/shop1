@@ -1,0 +1,123 @@
+<div class="form-group">
+    옵션 목록
+    <label for="opt_chk_all" class="sound_only">전체 옵션</label>
+    <input type="checkbox" name="opt_chk_all" value="1" id="opt_chk_all">
+</div>
+
+<?php foreach($data['optIdList'] as $key => $value): ?>
+    <ul class="list-group" data-me-number="<?php echo $key; ?>">
+        <li class="list-group-item">
+            <input type="hidden" name="optId[]" value="<?php echo $value; ?>">
+            <label for="opt_chk_<?php echo $key; ?>" class="sound_only"></label>
+            <input type="checkbox" name="opt_chk[]" id="opt_chk_<?php echo $key; ?>" value="1" ">
+        </li>
+        <li class="list-group-item">
+            <h3>옵션</h3>
+            <?php echo str_replace(chr(30),chr(62),$value)?>
+        </li>
+        <li class="list-group-item">
+            <h3>추가금액</h3>
+            <?php if($data['type'] == 'KRW'): ?>
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_price_<?php echo $key ?>">현금(원)</label></span>
+                </div>
+                <input type="number" name="optPrice[]" id="opt_price_<?php echo $key ?>" class="form-control" value="0" min="1">
+            </div>
+            <?php else: ?>
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_price_krwCosting_<?php echo $key ?>">현금(원) <i class="fa fa-arrow-right"></i> e-TP3, e-MC</label></span>
+                </div>
+                <input type="number" name="optCosting[]" id="opt_price_krwCosting_<?php echo $key ?>" class="form-control opt_price_krwCosting" value="0" min="0">
+            </div>
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_price_etp3_<?php echo $key ?>">e-TP3</label></span>
+                </div>
+                <input type="number" name="optPriceEtp3[]" id="opt_price_etp3_<?php echo $key ?>" class="form-control" value="0" min="1" readonly>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_price_emc_<?php echo $key ?>">e-MC</label></span>
+                </div>
+                <input type="number" name="optPriceEmc[]" id="opt_price_emc_<?php echo $key ?>" class="form-control" value="0" min="1" readonly>
+            </div>
+            <?php endif ?>
+        </li>
+
+        <li class="list-group-item">
+            <h3>재고수량</h3>
+            <label for="opt_stock_qty_<?php echo $key ?>" class="sound_only"></label>
+            <input type="number" name="optStockQty[]" id="opt_stock_qty_<?php echo $key ?>" class="form-control" value="0" min="1">
+        </li>
+
+        <li class="list-group-item">
+            <h3>사용여부</h3>
+            <label for="opt_use_<?php echo $key ?>" class="sound_only"></label>
+            <select name="optUse[]" id="opt_use_<?php echo $key ?>" class="form-control custom-select">
+                <option value="1" selected>사용함</option>
+                <option value="0">사용안함</option>
+            </select>
+        </li>
+    </ul>
+<?php endforeach; ?>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-action list-group-item-dark">
+        <legend>옵션 일괄 적용</legend>
+        <div class="alert alert-info">전체 옵션의 추가금액, 재고/통보수량 및 사용여부를 일괄 적용할 수 있습니다. 단, 체크된 수정항목만 일괄 적용됩니다.</div>
+    </li>
+    <?php if($data['type'] == 'KRW'): ?>
+        <li class="list-group-item list-group-item-action list-group-item-dark">
+            <input type="checkbox" name="opt_com_price_chk" value="1" id="opt_com_price_chk" class="opt_com_chk">
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_com_price">추가금액 현금(원)</label></span>
+                </div>
+                <input type="number" name="opt_com_price" value="0" id="opt_com_price" class="form-control" min="0">
+            </div>
+        </li>
+    <?php else: ?>
+        <li class="list-group-item list-group-item-action list-group-item-dark">
+            <input type="checkbox" name="opt_com_price_etp3_chk" value="1" id="opt_com_price_etp3_chk" class="opt_com_chk">
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_com_krwCosting">추가금액 현금(원) <i class="fa fa-arrow-right"></i> e-TP3,e-MC</label></span>
+                </div>
+                <input type="number" name="opt_com_krwCosting" value="0" id="opt_com_krwCosting" class="form-control" min="0">
+            </div>
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_com_price_etp3">추가금액 e-TP3</label></span>
+                </div>
+                <input type="number" name="opt_com_price_etp3" value="0" id="opt_com_price_etp3" class="form-control" min="0" readonly>
+            </div>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">
+            <input type="checkbox" name="opt_com_price_emc_chk" value="1" id="opt_com_price_emc_chk" class="opt_com_chk">
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><label for="opt_com_price_emc">추가금액(e-MC)</label></span>
+                </div>
+                <input type="number" name="opt_com_price_emc" value="0" id="opt_com_price_emc" class="form-control" min="0" readonly>
+            </div>
+        </li>
+    <?php endif; ?>
+    <li class="list-group-item list-group-item-action list-group-item-dark">
+        <input type="checkbox" name="opt_com_stock_chk" value="1" id="opt_com_stock_chk" class="opt_com_chk">
+        <label for="opt_com_stock">재고수량</label>
+        <input type="number" name="opt_com_stock" value="0" id="opt_com_stock" class="form-control" min="0">
+    </li>
+    <li class="list-group-item list-group-item-action list-group-item-dark">
+        <input type="checkbox" name="opt_com_use_chk" value="1" id="opt_com_use_chk" class="opt_com_chk">
+        <label for="opt_com_use">사용여부</label>
+        <select name="opt_com_use" id="opt_com_use" class="form-control custom-select">
+            <option value="1">사용함</option>
+            <option value="0">사용안함</option>
+        </select>
+    </li>
+    <li class="list-group-item list-group-item-action list-group-item-dark">
+        <span id="opt_value_apply" class="btn btn-success">일괄적용</span>
+    </li>
+</ul>

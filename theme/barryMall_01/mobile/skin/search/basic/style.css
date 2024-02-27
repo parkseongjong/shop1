@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* 전체검색결과 스킨 */
+#sch_res_detail {;background:#fff;padding:20px;margin: 0;text-align:center}
+
+#sch_res_ov {margin:0 0 20px;padding:20px;background:#fff;border-top:1px solid #eee;text-align:center;zoom:1}
+#sch_res_ov:after {display:block;visibility:hidden;clear:both;content:""}
+#sch_res_ov h2 {font-size:1.25em;margin:0 0 5px}
+#sch_res_ov dl {margin:0 0 5px;display:inline-block;;zoom:1}
+#sch_res_ov dt {display:inline-block}
+#sch_res_ov dd {display:inline-block;margin:0 2px 0 5px}
+#sch_res_ov p {margin:0;padding:0;color:#666;font-size:0.92em}
+
+#sch_res_board  {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+#sch_res_board li {
+    flex: 0 1 auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+#sch_res_board li:last-child{
+    margin-right: 0px;
+}
+ul#sch_res_board a {
+    display:block;
+    color: white;
+    line-height:24px;
+    border-radius:13px;
+    background-color: #5a6268;
+    padding:0 10px;
+}
+ul#sch_res_board a.sch_on {
+    font-weight: 400;
+    background-color: #64c12f;
+}
+#sch_result{
+    padding: 10px;
+}
+#sch_result .list_01 {padding:0}
+
+.sch_res_list {margin:0 0 10px;padding:10px 0}
+.sch_res_list h2 {
+    margin:0 0 10px;
+    font-size:1.083m;
+    padding: 0 10px;
+}
+.sch_res_list ul {margin:0 0 10px;padding:0;list-style:none}
+.sch_res_list li {margin:0 0 ;border-color:#eee;padding:0 10px 10px}
+.sch_res_list a {text-decoration:none}
+.sch_res_title {display:block;font-weight:bold;padding:10px 0;padding-right:30px;position:relative}
+.sch_res_info{line-height:28px;padding:3px 0 0;color:#666 }
+.sch_res_info:after {display:block;visibility:hidden;clear:both;content:""}
+.sch_res_new{position:absolute;top:10px;right:0;font-size:0.92em;color:#777;width:20px;height:20px;line-height:20px;display:block;background:#eee;text-align:center}
+.sch_res_list p {margin:0 0 10px;line-height:1.4em;color:#777;font-size:0.92em}
+.sch_more {
+    margin-bottom: 10px;
+}
+.sch_more a{
+    color: white
+}
+.sch_more strong,
+.sch_more i{
+    color: white;
+}
+.sch_datetime{float:right;font-style:italic}
+.sch_res_info .profile_img img{border-radius:50%;vertical-align:top}
+
+.data_grid {
+    position: relative;
+    background-color: none;
+    padding: 10px 10px;
+    margin: 10px 0 10px;
+}
+.data_grid > h2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+.data_grid ul {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    list-style-type:none;
+    margin:0 auto;
+    overflow:hidden;
+    
+}
+.data_grid li.cardWrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+.data_grid li.cardWrap:last-child {
+    margin-bottom: 0;
+}
+.data_grid li.cardWrap .card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+ }
+.data_grid li.cardWrap .card.soldout::before{
+    content: ' ';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dedede50;
+    z-index: 10;
+ } 
+.data_grid li.cardWrap .card > label,
+.data_grid li.cardWrap .card > input[type=checkbox]{
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+.data_grid li.cardWrap .card .card-img-area {
+    position: relative;
+    flex: 0 0 160px;
+    width: 160px;
+    height: 160px;
+    padding: 5px;
+}
+.data_grid li.cardWrap .card .card-img-area span.soldout {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.data_grid li.cardWrap .card .card-img-area img{
+    width: 100%;
+    height: 100%;
+}
+.data_grid li.cardWrap .card .card-img-area .notImage{
+    height:156px;
+    line-height:156px;
+    background:#f3f3f3;
+    margin-bottom:6px;
+    text-align:center
+}
+.data_grid li.cardWrap .card .card-body{
+    flex: 1 1 auto;
+}
+
+.data_grid li.bo_notice {background:#e6f8ff;border:1px solid #ffffff;}
+.data_grid li.empty_table {width:100%}
+.empty_table .desc {margin-top:20px;color:#bfbfbf;font-size:16px;}
+.data_grid li .cell {
+    padding:7px 10px
+}
+.data_grid li .cell * {font-size:11pt;font-weight:400}
+.data_grid li .cell .title_icon {vertical-align:middle; margin-left:4px;}
+.data_grid li .cell span.unit {font-size:15px; font-weight:700; margin-left:4px;}
+.data_grid li .cell .seller_name {font-size:12px;font-weight:100; }
+.data_grid li .cell a.cate_link {color: #3497d9;font-size:0.92em}
+.data_grid li .cell a.listSbjA .SbjBlock {
+
+}
+.data_grid li .cell .amount {
+    font-size:23px;
+    font-weight:700
+}
+.data_grid li .cell .amount > p {
+    font-size:22px;
+    font-weight:800;
+    color: black;
+    padding-left: 5px;
+}
+.data_grid li .cell .retailPrice {
+    font-size:13px;
+    font-weight:500
+}

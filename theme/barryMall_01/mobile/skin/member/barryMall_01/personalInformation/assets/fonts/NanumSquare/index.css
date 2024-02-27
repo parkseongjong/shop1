@@ -1,0 +1,59 @@
+/**
+  100 ~ 300: Light
+  400 ~ 600: Regular
+  700 ~ 800: Bold
+  900: Extra Bold
+*/
+
+/* Light */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareL.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareL.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareL.ttf');
+  font-weight: 300;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareR.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareR.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareR.ttf');
+  font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareB.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareB.ttf');
+  font-weight: 800;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('./NanumSquareEB.ttf');
+  font-weight: 900;
+}

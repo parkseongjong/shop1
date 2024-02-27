@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/*
+
+
+    Common
+
+
+*/
+.contentsWrap{
+    padding: 10px 0;
+    background-color: #e9ecef;
+}
+.contentsWrap > .contents{
+}
+.contentsWrap > .contents section.info{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 0 15px;
+    margin-top: 8px;
+}
+.contentsWrap > .contents section.info > div.title{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 11px;
+}
+.contentsWrap > .contents section.info > div.title > h3{
+    display: inline-block;
+    color: #222;
+    font-size: 16px;
+}
+.contentsWrap > .contents section.info > ul.contents{
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #efefef;
+    padding: 14px 0;
+    margin-top: 0;
+}
+.contentsWrap > .contents section.info > ul.contents > li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.contentsWrap > .contents section.info > ul.contents > li > .card{
+    width: 100%;
+}
+.table-striped .b-table-details tbody tr:nth-of-type(2n+1){
+  background-color: unset;
+}
+
+article.couponImg{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+article.couponImg > img{
+    position: relative;
+    left: 0;
+    z-index: 10;
+}
+article.couponImg > section{
+    position: absolute;
+    z-index: 15;
+}
+.paymentType > li{
+  cursor: pointer;
+  color: #222222;
+}
+.paymentType> li.active{
+  background-color: #64c12f;
+  border-color: #64c12f;
+}
+.paymentType > li.active,
+.paymentType > li.active > b{
+  color: white;
+}
+.card .form-group label{
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+.card .form-group .text-muted{
+  color: white !important;
+  font-size: 12px;
+}
+
+/*
+
+
+    creditCard
+
+
+*/
+
+
+
+/*
+
+
+    Virtual BankCode
+
+
+*/
+#bankCode .btn{
+  margin-bottom: 5px;
+}
+/*
+
+
+    Error
+
+
+*/
+.contentsWrap > .contents .errorContents{
+    text-align: center;
+    min-height: 500px;
+}

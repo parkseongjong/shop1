@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* 최근게시물 스킨 (latest) */
+.lt_notice {position:relative;background:#fe5d5d;border-radius:5px;margin:0 0 15px;padding: 0 110px;line-height:60px;overflow:hidden;font-size:1.077em;color:#fff}
+.lt_notice .lt_title{float:left;width:100px;position:absolute;top:0;left:0;background:#f54e4e;color:#fff;padding:0 0 0 20px;font-weight:bold}
+.lt_notice ul {display:none}
+.lt_notice li{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.lt_notice li a{color:#fff}
+.lt_notice .bx-controls-direction{position:absolute;top:10px;right:10px}
+.lt_notice .bx-controls-direction .bx-prev{background:url('./img/btn_prev.png') no-repeat 50% 50% #f54e4e;margin-right:3px}
+.lt_notice .bx-controls-direction .bx-next{background:url('./img/btn_next.png') no-repeat 50% 50% #f54e4e}
+.lt_notice .bx-controls-direction a{display:block;width:40px;height:40px;color:#fff;border-radius:30px;text-indent:-888px;overflow:hidden;float:left;}
+.lt_notice .bx-controls-direction a:hover{background-color:#e83636}
+
+
+@media (max-width: 969px){
+    .lt_notice {line-height:50px;padding-left:60px;padding-right:20px}
+    .lt_notice .bx-controls-direction {display:none}
+    .lt_notice .lt_title{width:50px}
+}

@@ -1,0 +1,24 @@
+<option value=""><?php echo $data['firstOptionTitle']; ?></option>
+
+<?php foreach($data['optionList'] as $key => $value): ?>
+    <?php if($value['optionLastCheck'] === false): ?>
+        <option
+                data-test="test"
+                value="<?php echo $value['optionBuildValue']; ?>"
+                data-option-title="<?php echo $data['firstOptionTitle']; ?>"
+                data-option-value="<?php echo $value['optionValue']; ?>"
+                data-io-type="<?php echo $value['optionType']; ?>"
+        >
+            <?php echo $value['optionValue'].$value['soldOutMsg']; ?>
+        </option>
+    <?php else: ?>
+        <option
+                value="<?php echo $value['optionBuildValue']; ?>"
+                data-option-title="<?php echo $data['firstOptionTitle']; ?>"
+                data-option-value="<?php echo $value['optionValue']; ?>"
+                data-io-type="<?php echo $value['optionType']; ?>"
+        >
+            <?php echo $value['optionValue'].'&nbsp&nbsp+'.$value['priceTP3'].$value['priceTP3Unit'].'&nbsp&nbsp+'.$value['priceMC'].$value['priceMCUnit'].'&nbsp&nbsp'.$value['soldOutMsg']; ?>
+        </option>
+    <?php endif; ?>
+<?php endforeach; ?>
